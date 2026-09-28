@@ -166,7 +166,7 @@ export const FindingsReview: React.FC<FindingsReviewProps> = ({
           </div>
 
           {/* Interactive CT Cross-Section Rendering Box */}
-          <div className="relative w-full aspect-square max-h-[460px] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden flex items-center justify-center medical-grid group">
+          <div data-radiology-viewport="true" className="relative w-full aspect-square max-h-[460px] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden flex items-center justify-center medical-grid group">
             
             {/* Synthetic Anatomical Kidney Cross-Section SVG Rendering */}
             <div 

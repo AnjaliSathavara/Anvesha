@@ -84,8 +84,9 @@ html.light .glass-panel-hover:hover {
   box-shadow: 0 6px 20px rgba(6, 182, 212, 0.18) !important;
 }
 
+/* Background Mappings for Containers & Cards in Light Mode */
 html.light .bg-slate-950 {
-  background-color: #e2e8f0 !important;
+  background-color: #f1f5f9 !important;
   color: #020617 !important;
 }
 
@@ -97,21 +98,30 @@ html.light .bg-slate-900 {
 
 html.light .bg-slate-900\/90,
 html.light .bg-slate-900\/80,
-html.light .bg-slate-900\/60 {
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/40,
+html.light .bg-slate-900\/30 {
   background-color: rgba(255, 255, 255, 0.98) !important;
   color: #020617 !important;
 }
 
+html.light .bg-slate-950\/90,
 html.light .bg-slate-950\/80,
 html.light .bg-slate-950\/70,
+html.light .bg-slate-950\/60,
 html.light .bg-slate-950\/50,
-html.light .bg-slate-950\/40 {
+html.light .bg-slate-950\/40,
+html.light .bg-slate-950\/30 {
   background-color: #f8fafc !important;
   color: #020617 !important;
 }
 
 html.light .bg-slate-800,
+html.light .bg-slate-800\/90,
 html.light .bg-slate-800\/80,
+html.light .bg-slate-800\/70,
 html.light .bg-slate-800\/60,
 html.light .bg-slate-800\/50,
 html.light .bg-slate-800\/40 {
@@ -120,15 +130,56 @@ html.light .bg-slate-800\/40 {
   border-color: #cbd5e1 !important;
 }
 
+/* Border Mappings in Light Mode */
 html.light .border-slate-800,
 html.light .border-slate-800\/90,
 html.light .border-slate-800\/80,
-html.light .border-slate-800\/60 {
+html.light .border-slate-800\/70,
+html.light .border-slate-800\/60,
+html.light .border-slate-800\/50,
+html.light .border-slate-800\/40 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-slate-700,
+html.light .border-slate-700\/80,
+html.light .border-slate-700\/60 {
   border-color: #94a3b8 !important;
 }
 
-html.light .border-slate-700 {
-  border-color: #64748b !important;
+html.light .border-slate-900 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light .border-cyan-800,
+html.light .border-cyan-800\/80,
+html.light .border-cyan-900,
+html.light .border-cyan-950 {
+  border-color: #7dd3fc !important;
+}
+
+html.light .border-teal-800,
+html.light .border-teal-800\/80,
+html.light .border-teal-900 {
+  border-color: #5eead4 !important;
+}
+
+html.light .border-amber-800,
+html.light .border-amber-800\/80,
+html.light .border-amber-900 {
+  border-color: #fcd34d !important;
+}
+
+html.light .border-rose-800,
+html.light .border-rose-800\/80,
+html.light .border-rose-900 {
+  border-color: #fca5a5 !important;
+}
+
+html.light .border-emerald-800,
+html.light .border-emerald-800\/80,
+html.light .border-emerald-900 {
+  border-color: #6ee7b7 !important;
 }
 
 html.light .divide-slate-800 > :not([hidden]) ~ :not([hidden]),
@@ -136,6 +187,8 @@ html.light .divide-slate-800\/60 > :not([hidden]) ~ :not([hidden]) {
   border-color: #cbd5e1 !important;
 }
 
+/* High Contrast Text Mappings for Light Mode */
+html.light .text-slate-50,
 html.light .text-slate-100 {
   color: #020617 !important;
 }
@@ -164,18 +217,29 @@ html.light textarea {
   border-color: #cbd5e1 !important;
 }
 
-/* Accessible High-Contrast Color Tokens for Light Mode */
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+html.light option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Accent Color Tokens & Badges in Light Mode */
+html.light .text-amber-100,
+html.light .text-amber-200,
 html.light .text-amber-300,
 html.light .text-amber-400 {
-  color: #b45309 !important;
+  color: #92400e !important;
 }
 
-html.light .text-amber-100,
-html.light .text-amber-200 {
-  color: #78350f !important;
-}
-
-html.light .bg-amber-950 {
+html.light .bg-amber-950,
+html.light .bg-amber-950\/80,
+html.light .bg-amber-950\/60,
+html.light .bg-amber-950\/40 {
   background-color: #fef3c7 !important;
   border-color: #fde68a !important;
   color: #92400e !important;
@@ -187,17 +251,17 @@ html.light .bg-amber-500\/5 {
   border-color: #fde68a !important;
 }
 
+html.light .text-rose-100,
+html.light .text-rose-200,
 html.light .text-rose-300,
 html.light .text-rose-400 {
-  color: #be123c !important;
+  color: #9f1239 !important;
 }
 
-html.light .text-rose-100,
-html.light .text-rose-200 {
-  color: #881337 !important;
-}
-
-html.light .bg-rose-950 {
+html.light .bg-rose-950,
+html.light .bg-rose-950\/80,
+html.light .bg-rose-950\/60,
+html.light .bg-rose-950\/40 {
   background-color: #ffe4e6 !important;
   border-color: #fecdd3 !important;
   color: #9f1239 !important;
@@ -209,37 +273,99 @@ html.light .bg-rose-500\/5 {
   border-color: #fecdd3 !important;
 }
 
+html.light .text-cyan-100,
+html.light .text-cyan-200,
 html.light .text-cyan-300,
 html.light .text-cyan-400 {
-  color: #0284c7 !important;
+  color: #0369a1 !important;
 }
 
-html.light .bg-cyan-950 {
+html.light .bg-cyan-950,
+html.light .bg-cyan-950\/80,
+html.light .bg-cyan-950\/60,
+html.light .bg-cyan-950\/40 {
   background-color: #e0f2fe !important;
   border-color: #bae6fd !important;
   color: #0369a1 !important;
 }
 
+html.light .text-teal-100,
+html.light .text-teal-200,
 html.light .text-teal-300,
 html.light .text-teal-400 {
-  color: #0d9488 !important;
+  color: #0f766e !important;
 }
 
-html.light .bg-teal-950 {
+html.light .bg-teal-950,
+html.light .bg-teal-950\/80,
+html.light .bg-teal-950\/60,
+html.light .bg-teal-950\/40 {
   background-color: #ccfbf1 !important;
   border-color: #99f6e4 !important;
   color: #115e59 !important;
 }
 
+html.light .text-emerald-100,
+html.light .text-emerald-200,
 html.light .text-emerald-300,
 html.light .text-emerald-400 {
-  color: #059669 !important;
+  color: #047857 !important;
 }
 
-html.light .bg-emerald-950 {
+html.light .bg-emerald-950,
+html.light .bg-emerald-950\/80,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-950\/40 {
   background-color: #d1fae5 !important;
   border-color: #a7f3d0 !important;
   color: #065f46 !important;
+}
+
+html.light .text-sky-100,
+html.light .text-sky-200,
+html.light .text-sky-300,
+html.light .text-sky-400 {
+  color: #075985 !important;
+}
+
+html.light .bg-sky-950,
+html.light .bg-sky-950\/80,
+html.light .bg-sky-950\/60,
+html.light .bg-sky-950\/40 {
+  background-color: #e0f2fe !important;
+  border-color: #bae6fd !important;
+  color: #075985 !important;
+}
+
+/* Ensure Primary Action Buttons Retain Crisp White Text */
+html.light .bg-cyan-600,
+html.light .bg-cyan-500,
+html.light .bg-teal-600,
+html.light .bg-emerald-600,
+html.light .bg-rose-600,
+html.light .bg-amber-600 {
+  color: #ffffff !important;
+}
+
+html.light .bg-cyan-600 *,
+html.light .bg-cyan-500 *,
+html.light .bg-teal-600 *,
+html.light .bg-emerald-600 *,
+html.light .bg-rose-600 * {
+  color: #ffffff !important;
+}
+
+/* Light Mode Radiologic Viewport Exception */
+html.light .radiology-viewport,
+html.light [data-radiology-viewport="true"] {
+  background-color: #090d16 !important;
+  border-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+html.light .radiology-viewport *,
+html.light [data-radiology-viewport="true"] * {
+  border-color: inherit;
 }
 
 /* Light mode CT Radiologic Viewport Exemption */
