@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ANVESHA - Comprehensive User Guide & Platform Documentation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    @page {
+      size: A4;
+      margin: 18mm 15mm 18mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #0f172a;
+      background-color: #ffffff;
+      line-height: 1.6;
+      font-size: 11.5pt;
+    }
+
+    /* Header Banner */
+    .header-banner {
+      background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+      color: #ffffff;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title {
+      font-size: 26pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .brand-subtitle {
+      font-size: 11pt;
+      font-weight: 500;
+      opacity: 0.95;
+      color: #e0f2fe;
+    }
+
+    .doc-badge {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Document Sections */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 15pt;
+      font-weight: 700;
+      color: #0369a1;
+      border-bottom: 2px solid #e0f2fe;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title span.number {
+      background: #0284c7;
+      color: #ffffff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10pt;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: #334155;
+    }
+
+    /* Highlight Cards & Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 12px 0;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .card-title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .card-title.cyan { color: #0284c7; }
+    .card-title.teal { color: #0d9488; }
+    .card-title.amber { color: #b45309; }
+    .card-title.rose { color: #be123c; }
+
+    /* Steps Box */
+    .step-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #0284c7;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .step-name {
+      font-weight: 700;
+      font-size: 12pt;
+      color: #0f172a;
+    }
+
+    .step-tag {
+      font-size: 8.5pt;
+      font-weight: 700;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    /* Emergency Alert Box */
+    .alert-box {
+      background: #ffe4e6;
+      border: 1px solid #fecdd3;
+      border-left: 5px solid #be123c;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      color: #881337;
+    }
+
+    .alert-title {
+      font-weight: 800;
+      font-size: 12pt;
+      color: #9f1239;
+      margin-bottom: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 30px;
+      padding-top: 14px;
+      border-top: 1px solid #cbd5e1;
+      font-size: 9pt;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER BANNER -->
+  <div class="header-banner">
+    <div>
+      <div class="brand-title">ANVESHA</div>
+      <div class="brand-subtitle">AI-assisted Kidney Stone Intelligence & Personal Health Monitoring Platform</div>
+    </div>
+    <div class="doc-badge">User Manual & Feature Guide</div>
+  </div>
+
+  <!-- SECTION 1: INTRODUCTION -->
+  <div class="section">
+    <div class="section-title">
+      <span class="number">1</span> What is ANVESHA?
+    </div>
+    <p>
+      <strong>ANVESHA</strong> is a personal health monitoring and intelligent medical scan platform designed to help patients, family caregivers, and physicians easily track, analyze, and manage kidney health records and Non-Contrast Computed Tomography (NCCT) abdomen CT scans.
+    </p>
+    <p>
+      Kidney stones (calculi) are a common health concern. ANVESHA makes complex medical scan information easy to understand by providing simple visual summaries, calculus metrics (size, density, location), hydronephrosis grading, and printable doctor report summaries.
+    </p>
+  </div>
+
+  <!-- SECTION 2: KEY BENEFITS -->
+  <div class="section">
+    <div class="section-title">
+      <span class="number">2</span> Key Benefits
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title cyan">💡 For Patients & Families</div>
+        <ul>
+          <li><strong>Easy Understanding:</strong> No medical degree required. Translates raw CT scans into simple numbers and clear guides.</li>
+          <li><strong>Family Health Profiles:</strong> Keep track of multiple family members' health records in one safe place.</li>
+          <li><strong>Printable Doctor Reports:</strong> Download or print ready-to-use medical summary reports for physician visits.</li>
+          <li><strong>Safety Alerts:</strong> Instant warnings to help identify when emergency medical care is needed.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-title teal">🩺 For Healthcare Providers</div>
+        <ul>
+          <li><strong>Automated Scan Intake:</strong> Fast processing of DICOM CT scan volumes (.dcm, .zip, .nii).</li>
+          <li><strong>Calculus Metrics:</strong> Calculates maximum stone size (mm), Hounsfield Unit (HU) density, and hydronephrosis grade.</li>
+          <li><strong>Axial Slice Viewer:</strong> Interactive slice simulator with Bone/Stone and Soft Tissue contrast presets.</li>
+          <li><strong>Digital Review Sign-off:</strong> Save clinical impression notes with secure digital verification signatures.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE BREAK FOR CLEAN PDF STRUCTURE -->
+  <div class="page-break"></div>
+
+  <!-- SECTION 3: STEP-BY-STEP WORKFLOW -->
+  <div class="section">
+    <div class="section-title">
+      <span class="number">3</span> How ANVESHA Works: Step-by-Step Guide
+    </div>
+    <p>Using ANVESHA is straightforward. Follow these steps to navigate and use all platform features:</p>
+
+    <!-- Step 1 -->
+    <div class="step-box">
+      <div class="step-header">
+        <div class="step-name">Step 1: Personal Health Overview (Home / Dashboard)</div>
+        <div class="step-tag">Dashboard</div>
+      </div>
+      <p>When you log in to ANVESHA, you start on the <strong>Home Dashboard</strong>. Here you can view:</p>
+      <ul>
+        <li><strong>Health Profiles:</strong> Total family and personal profiles registered.</li>
+        <li><strong>CT Scans Analyzed:</strong> Number of completed scan evaluations.</li>
+        <li><strong>Scans Awaiting Review:</strong> Scans currently being reviewed by a doctor.</li>
+        <li><strong>High-Risk Calculi Warning Cards:</strong> Highlights stones larger than 7.0mm or scans flagged with significant kidney blockage (hydronephrosis).</li>
+      </ul>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-box">
+      <div class="step-header">
+        <div class="step-name">Step 2: Managing Health Profiles (My Health Records)</div>
+        <div class="step-tag">Patients Tab</div>
+      </div>
+      <p>Click on <strong>My Health Records</strong> in the side menu to view and add profile records:</p>
+      <ul>
+        <li>Click <strong>"+ Add New Health Profile"</strong> to register a family member or personal profile.</li>
+        <li>Enter profile name, age, gender, medical record number (MRN), contact number, and medical history.</li>
+        <li>Filter profile records by risk category (<em>Critical, High, Moderate, Low</em>).</li>
+      </ul>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-box">
+      <div class="step-header">
+        <div class="step-name">Step 3: Scan Upload & Intake (Scan Upload)</div>
+        <div class="step-tag">Upload Tab</div>
+      </div>
+      <p>To analyze a new CT scan file:</p>
+      <ul>
+        <li>Click <strong>Scan Upload</strong> on the sidebar.</li>
+        <li>Drag & drop your CT scan file (accepted formats: <code>.dcm</code>, <code>.zip</code>, <code>.nii</code>, max 500 MB).</li>
+        <li>Click <strong>"Start Automated Scan Intake"</strong>. ANVESHA will validate DICOM metadata headers, spatial resolution, and slice thickness.</li>
+        <li>Alternatively, click <strong>"Load Pre-Configured DICOM Sample"</strong> to test the features instantly.</li>
+      </ul>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-box">
+      <div class="step-header">
+        <div class="step-name">Step 4: Interactive Slice Visualizer & Findings (CT Analysis)</div>
+        <div class="step-tag">Findings Tab</div>
+      </div>
+      <p>Explore your CT scan interactively:</p>
+      <ul>
+        <li><strong>Slice Slider:</strong> Scroll slice-by-slice through the axial CT cross-section to view kidney anatomical structures.</li>
+        <li><strong>Contrast Presets:</strong> Toggle between <em>Bone/Stone (W:1500 L:400)</em> to highlight hard stones and <em>Soft Tissue (W:400 L:40)</em> to inspect kidney tissue.</li>
+        <li><strong>ROI Bounding Box:</strong> Highlight the exact location of detected kidney stones.</li>
+        <li><strong>Calculus Metrics Card:</strong> Review key measurements including Stone Location (e.g. <em>Right Lower Pole Calyx</em>), Maximum Size (mm), Density (HU), and Hydronephrosis Grade.</li>
+      </ul>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-box">
+      <div class="step-header">
+        <div class="step-name">Step 5: Summary Report & Doctor Export (Reports)</div>
+        <div class="step-tag">Reports Tab</div>
+      </div>
+      <p>Access the complete printable report:</p>
+      <ul>
+        <li>Click <strong>"Print Official Summary Report"</strong> to generate a clean paper copy or PDF document for your doctor's appointment.</li>
+        <li>Includes clinical impression notes, recommended treatments (e.g., fluid protocols, tamsulosin, urology consultation), and digital sign-off verification.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PAGE BREAK FOR CLEAN PDF STRUCTURE -->
+  <div class="page-break"></div>
+
+  <!-- SECTION 4: GLOSSARY OF MEDICAL TERMS -->
+  <div class="section">
+    <div class="section-title">
+      <span class="number">4</span> Simple Medical Glossary for Patients
+    </div>
+    <p>Here is a quick reference table explaining common medical terms used in CT scan reports:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Medical Term</th>
+          <th>What It Means in Plain Language</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NCCT Abdomen & Pelvis</strong></td>
+          <td>Non-Contrast Computed Tomography scan. A 3D X-ray scan of the belly taken without injecting dye. It is the gold-standard scan for detecting kidney stones.</td>
+        </tr>
+        <tr>
+          <td><strong>Calculus / Calculi</strong></td>
+          <td>The medical term for a kidney stone (or multiple stones).</td>
+        </tr>
+        <tr>
+          <td><strong>Hounsfield Units (HU)</strong></td>
+          <td>A measurement of density. Soft tissues are around 30-50 HU, while hard calcium stones are usually 600 to 1200+ HU. Higher density stones are harder to break.</td>
+        </tr>
+        <tr>
+          <td><strong>Hydronephrosis</strong></td>
+          <td>Swelling of the kidney caused when a stone blocks the flow of urine down the ureter tube. Graded from Grade 1 (Mild) to Grade 4 (Severe).</td>
+        </tr>
+        <tr>
+          <td><strong>Ureteric Dilatation</strong></td>
+          <td>Wideness or swelling of the urine tube connecting the kidney to the bladder due to a downstream stone obstruction.</td>
+        </tr>
+        <tr>
+          <td><strong>Medical Expulsive Therapy (MET)</strong></td>
+          <td>Medications (such as Tamsulosin) prescribed by doctors to relax muscles in the ureter and help small stones (&lt; 5-6mm) pass naturally in urine.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 5: SAFETY ALERT -->
+  <div class="alert-box">
+    <div class="alert-title">⚠️ URGENT MEDICAL SAFETY NOTICE</div>
+    <p>
+      ANVESHA provides health tracking and educational insights. It is not a replacement for professional medical advice or emergency care.
+    </p>
+    <p style="margin-bottom: 0;">
+      <strong>Seek Emergency Hospital Care Immediately if you experience:</strong>
+      <br>• Severe side or back (flank) pain accompanied by high fever or chills
+      <br>• Severe nausea, vomiting, or total inability to pass urine
+      <br>• Visible blood in urine combined with severe fever
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>ANVESHA Platform Guide • Version 0.5.0</div>
+    <div>Confidential & Educational Patient Portal Document</div>
+  </div>
+
+</body>
+</html>
