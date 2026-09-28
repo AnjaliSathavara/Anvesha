@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @layer base {
   body {
     background-color: #030712;
@@ -207,6 +209,20 @@ html.light .text-slate-400 {
 
 html.light .text-slate-500 {
   color: #475569 !important;
+}
+
+/* High Contrast Text Mappings for Dark Mode */
+html.dark .text-slate-900,
+html.dark .text-slate-950 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
 }
 
 html.light input,

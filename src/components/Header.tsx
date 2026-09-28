@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-slate-950 via-teal-950 to-cyan-950 dark:from-slate-100 dark:via-cyan-200 dark:to-teal-300 bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-cyan-950 via-teal-900 to-slate-900 dark:from-slate-100 dark:via-cyan-200 dark:to-teal-300 bg-clip-text text-transparent">
                 ANVESHA
               </h1>
             </div>

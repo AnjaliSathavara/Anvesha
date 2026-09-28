@@ -252,30 +252,30 @@ export const ScanUpload: React.FC<ScanUploadProps> = ({
         )}
 
         {/* Quick Action Button for Sample Data */}
-        <div className="p-5 rounded-2xl bg-gradient-to-r from-slate-900 via-cyan-950/60 to-slate-900 border border-cyan-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-5 rounded-2xl bg-gradient-to-r from-cyan-50 via-teal-50/80 to-sky-50 dark:from-slate-900 dark:via-cyan-950/60 dark:to-slate-900 border border-cyan-200/90 dark:border-cyan-800/80 shadow-sm dark:shadow-none flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="text-sm font-bold text-slate-100 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
+            <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
               <span>Explore Sample Scan Record</span>
             </h3>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
               Explore pre-configured sample scan data in the interactive viewer.
             </p>
           </div>
           <div className="flex items-center space-x-2 shrink-0">
             <button
               onClick={() => setActiveTab('results')}
-              className="px-4 py-2 rounded-xl bg-cyan-950 text-cyan-300 border border-cyan-800 hover:bg-cyan-900 text-xs font-bold cursor-pointer flex items-center gap-1.5"
+              className="px-4 py-2 rounded-xl bg-white dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 border border-cyan-300 dark:border-cyan-800 hover:bg-cyan-50 dark:hover:bg-cyan-900 text-xs font-bold cursor-pointer flex items-center gap-1.5 transition-all shadow-sm"
             >
-              <Terminal className="w-3.5 h-3.5" />
+              <Terminal className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
               <span>Run Results</span>
             </button>
             <button
               onClick={onLoadSampleStudy}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white text-xs font-bold shadow-lg shadow-cyan-950 cursor-pointer flex items-center gap-1.5"
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white text-xs font-bold shadow-md shadow-cyan-600/20 dark:shadow-cyan-950 cursor-pointer flex items-center gap-1.5 transition-all"
             >
               <span>Explore Sample Scan</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3.5 h-3.5 text-white" />
             </button>
           </div>
         </div>

@@ -261,13 +261,13 @@ export const FinalResults: React.FC<FinalResultsProps> = ({
         {/* ==================================================
             6. FINDINGS & ANALYSIS DIRECT REDIRECT PROMPT
             ================================================== */}
-        <div className="glass-panel p-5 rounded-2xl border border-cyan-800/80 bg-gradient-to-br from-slate-900 via-cyan-950/30 to-slate-900 space-y-4 flex flex-col justify-between">
+        <div className="glass-panel p-5 rounded-2xl border border-cyan-200/90 dark:border-cyan-800/80 bg-gradient-to-br from-cyan-50 via-teal-50/80 to-sky-50 dark:from-slate-900 dark:via-cyan-950/30 dark:to-slate-900 space-y-4 flex flex-col justify-between">
           <div>
-            <div className="flex items-center space-x-2 text-cyan-300 font-bold text-sm">
-              <Stethoscope className="w-5 h-5 text-cyan-400" />
+            <div className="flex items-center space-x-2 text-cyan-800 dark:text-cyan-300 font-bold text-sm">
+              <Stethoscope className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
               <span>6. Findings & Slice Visualizer Access</span>
             </div>
-            <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+            <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
               Explore the interactive axial DICOM viewer, scroll slice-by-slice, inspect calculus ROI annotations, and review specialist recommendations.
             </p>
           </div>
@@ -275,7 +275,7 @@ export const FinalResults: React.FC<FinalResultsProps> = ({
           <div className="pt-2">
             <button
               onClick={() => setActiveTab('findings')}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-xs shadow-lg shadow-cyan-950 transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-xs shadow-md shadow-cyan-600/20 dark:shadow-cyan-950 transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <Stethoscope className="w-4 h-4" />
               <span>Open Findings & Slice Visualizer</span>
