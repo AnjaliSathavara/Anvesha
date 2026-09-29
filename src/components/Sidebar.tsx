@@ -25,7 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const navItems: { id: TabType; label: string; icon: React.FC<{ className?: string }>; badge?: number; description: string }[] = [
     { 
       id: 'dashboard', 
-      label: 'Home', 
+      label: 'Dashboard', 
       icon: Home,
       description: 'Personal Health & Scan Overview'
     },

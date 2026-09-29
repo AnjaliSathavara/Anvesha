@@ -10,6 +10,7 @@ import { FindingsReview } from './components/FindingsReview';
 import { Reports } from './components/Reports';
 import { DemoDisclaimerModal } from './components/DemoDisclaimerModal';
 import { AuthModal } from './components/AuthModal';
+import { LandingPage } from './components/LandingPage';
 import { Patient, CTStudy, GenerationRunResult } from './types';
 import { INITIAL_PATIENTS, INITIAL_STUDIES, INITIAL_RUN_RESULT } from './data/mockData';
 import { supabase } from './lib/supabase';
@@ -27,8 +28,11 @@ export function App() {
     return (savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : 'dark';
   });
 
-  // Supabase Auth State
-  const [authUser, setAuthUser] = useState<any | null>(null);
+  // Supabase Auth State (with local storage session backup)
+  const [authUser, setAuthUser] = useState<any | null>(() => {
+    const saved = localStorage.getItem('anvesha_auth_user');
+    return saved ? JSON.parse(saved) : null;
+  });
   const [isAuthModalOpen, setIsAuthModalOpen] = useState<boolean>(false);
   const [authModalMode, setAuthModalMode] = useState<'login' | 'signup'>('login');
 
@@ -42,15 +46,31 @@ export function App() {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
+  const handleSetAuthUser = (user: any | null) => {
+    setAuthUser(user);
+    if (user) {
+      localStorage.setItem('anvesha_auth_user', JSON.stringify(user));
+      setActiveTab('dashboard'); // Redirect to Dashboard on successful sign-in
+    } else {
+      localStorage.removeItem('anvesha_auth_user');
+    }
+  };
+
   useEffect(() => {
     // Check initial Supabase Auth session
     supabase.auth.getSession().then(({ data: { session } }) => {
-      setAuthUser(session?.user ?? null);
+      if (session?.user) {
+        handleSetAuthUser(session.user);
+      }
     });
 
     // Listen for auth changes (login, logout, token refresh)
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setAuthUser(session?.user ?? null);
+      if (session?.user) {
+        handleSetAuthUser(session.user);
+      } else if (_event === 'SIGNED_OUT') {
+        handleSetAuthUser(null);
+      }
     });
 
     return () => subscription.unsubscribe();
@@ -58,7 +78,7 @@ export function App() {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    setAuthUser(null);
+    handleSetAuthUser(null);
   };
 
   const handleOpenAuth = (mode: 'login' | 'signup' = 'login') => {
@@ -139,6 +159,35 @@ export function App() {
 
   const pendingCount = studies.filter(s => s.status === 'Pending Review' || s.status === 'In Review').length;
 
+  // Unauthenticated Visitor Flow -> Public Landing Page
+  if (!authUser) {
+    return (
+      <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-cyan-500 selection:text-slate-950">
+        <LandingPage
+          onOpenAuth={handleOpenAuth}
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          onOpenDisclaimer={() => setIsDisclaimerOpen(true)}
+        />
+
+        {/* Prototype Scope Information Modal */}
+        <DemoDisclaimerModal
+          isOpen={isDisclaimerOpen}
+          onClose={() => setIsDisclaimerOpen(false)}
+        />
+
+        {/* Supabase Authentication Modal */}
+        <AuthModal
+          isOpen={isAuthModalOpen}
+          onClose={() => setIsAuthModalOpen(false)}
+          initialMode={authModalMode}
+          onAuthSuccess={(user) => handleSetAuthUser(user)}
+        />
+      </div>
+    );
+  }
+
+  // Authenticated Patient/User Flow -> Application with Sidebar & Dashboard
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-cyan-500 selection:text-slate-950">
       {/* Top Header */}
@@ -243,7 +292,7 @@ export function App() {
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
         initialMode={authModalMode}
-        onAuthSuccess={(user) => setAuthUser(user)}
+        onAuthSuccess={(user) => handleSetAuthUser(user)}
       />
     </div>
   );
